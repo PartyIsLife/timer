@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>sekundomer</title>
+</head>
+<body>
+
+<center><h1 id="time">0</h1>
+<br />
+    <button onclick="start1()"><img src="treugolnik.png" height="30" width="30" hspace="10" vspace="5"></button>
+    <button  onclick="stop1 ()"><img  src="pause.jpg" height="40" width="40" > </button>
+    <button onclick="stop2()"> <img src="4st.png" height="30" width="30" hspace="10" vspace="4" ></button>
+
+
+</center>
+</body>
+<script>
+    i = 0;
+    timer = undefined;
+
+function start1() {
+ clearInterval(timer);
+  timer = setInterval(function () {
+      i = i+1;
+      document.getElementById("time").innerHTML = i;
+
+  }, 1000)
+
+}
+function stop1 () {
+
+   clearInterval(timer);
+
+}
+function stop2() {
+    clearInterval(timer);
+    i = 0;
+    document.getElementById("time").innerHTML = 0;
+}
+
+</script>
+</html>
